@@ -1,0 +1,50 @@
+$(document).ready(function(){
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+                nav:true,
+                margin:10,
+                autoplay:true,
+                autoplayTimeout:1000,
+                autoplayHoverPause:true
+            },
+            800:{
+                items:3,
+                nav:false,
+                margin:10,
+                autoplay:true,
+                autoplayTimeout:1000,
+                autoplayHoverPause:true
+            },
+            1000:{
+                items:3,
+                nav:true,
+                loop:true,
+                margin:10,
+                autoplay:true,
+                autoplayTimeout:1000,
+                autoplayHoverPause:true
+            }
+        }
+    });
+    });
+$(window).on('load',function(){
+    $(".loader").fadeOut(2000);
+})
+
+$(document).ready(function(){
+    $(".toggle").click(function(){
+        $(".navbar").css("display","flex"),
+        $(".navbar").css("right","0px"),
+        $(".overlay").css("display","block")
+    })
+    
+    $(".overlay").click(function(){
+        $(".navbar").css("right","-100%"),
+        $(".overlay").css("display","none")
+    })
+})
